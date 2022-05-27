@@ -9,6 +9,6 @@ The using git clone to clone the dataset, .py file and .sh file from my github a
 
 Put the dataset json files on to hdfs, then change the test_data variable according to the json file path on line 145. hdfs dfs -put "your data file path on your current path"
 
-After the configuration, just start the program by type "./a2.sh" on the command line to run the script.
+After the configuration, just start the program by type chmod 700 a2.sh then "./a2.sh" on the command line to run the script.
 
 A result output file will be create on your current path.
