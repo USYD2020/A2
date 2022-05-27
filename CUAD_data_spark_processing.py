@@ -145,7 +145,7 @@ spark = SparkSession \
     .config("spark.executor.memory", "2G") \
     .getOrCreate()
 
-test_data = "test.json"
+test_data = "s3://comp5349-2022/test.json"
 test_init_df = spark.read.json(test_data)
 
 # check the schema of data frame
