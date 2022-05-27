@@ -145,7 +145,7 @@ spark = SparkSession \
     .config("spark.executor.memory", "2G") \
     .getOrCreate()
 
-test_data = "data/test.json"
+test_data = "test.json"
 test_init_df = spark.read.json(test_data)
 
 # check the schema of data frame
@@ -201,7 +201,7 @@ question_answering_model_rdd = ins_preprocess_rdd.flatMap(balance_ins_ps)
 
 # convert rdd to json file
 df = question_answering_model_rdd.toDF(["source", "question", "answer_start", "answer_end"])
-df.write.json("/output")
+df.write.json("/output.json")
 
 
 
