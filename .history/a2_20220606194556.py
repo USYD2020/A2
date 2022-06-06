@@ -30,7 +30,7 @@ spark = SparkSession \
     .builder \
     .appName("A2") \
     .config("spark.sql.shuffle.partitions", 10) \
-    .config("spark.executor.cores", "8") \
+    .config("spark.executor.cores", "12") \
     .config("spark.executor.memory", "2G") \
     .config("spark.default.parallelism", 100) \
     .config("spark.eventLog.logBlockUpdates.enabled", True) \
