@@ -48,12 +48,12 @@ file_dict = {'train': 's3://comp5349-2022/train_separate_questions.json',
              'test': 's3://comp5349-2022/test.json',
              'large': 's3://comp5349-2022/CUADv1.json'}
 
-dataset_used = args.dataset
-# dataset_used = "test.json"
+# dataset_used = args.dataset
+dataset_used = "test.json"
 
 # read in data
 raw_df = spark.read.json(file_dict.get(dataset_used))
-# raw_df = spark.read.json(dataset_used)
+raw_df = spark.read.json(dataset_used)
 print("===== Check Schema of raw dataframe =====\n")
 raw_df.printSchema()
 

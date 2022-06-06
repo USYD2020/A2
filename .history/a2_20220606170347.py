@@ -53,7 +53,7 @@ dataset_used = args.dataset
 
 # read in data
 raw_df = spark.read.json(file_dict.get(dataset_used))
-# raw_df = spark.read.json(dataset_used)
+raw_df = spark.read.json(dataset_used)
 print("===== Check Schema of raw dataframe =====\n")
 raw_df.printSchema()
 
